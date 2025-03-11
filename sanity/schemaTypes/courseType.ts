@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import {} from 'next'
+import {} from "next";
 
 export const courseType = defineType({
   name: "course",
@@ -59,22 +59,4 @@ export const courseType = defineType({
       to: [{ type: "instructor" }],
     }),
   ],
-
-  // preview: {
-  //   select: {
-  //     courseTitle: "course.title",
-  //     lessonTitle: "lesson.title",
-  //     completedAt: "completedAt",
-  //     courseImage: "course.image",
-  //   },
-  //   prepare({ courseTitle, lessonTitle, completedAt, courseImage }) {
-  //     return {
-  //       title: `${courseTitle || "Course"}: "${lessonTitle || "Lesson"}"`,
-  //       subtitle: completedAt ? new Date(completedAt).toLocaleDateString() : "",
-  //       media:(
-  //         <Image />
-  //       )
-  //     };
-  //   },
-  // },
 });
